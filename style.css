@@ -1,0 +1,238 @@
+html, ul, li, * {
+    padding: 0;
+    margin: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    height: 100%;
+  }
+  
+  a {
+    color: black;
+    text-decoration: none;
+    outline: none;
+  }
+
+  .container {
+    width: 1120px;
+    margin: 5px auto;
+    text-align: center;
+  }
+
+  header {
+    color: rgba(0, 0, 0, 0.87);
+  }
+  
+  .header-nav {
+    font-size: 13px;
+    margin-bottom: 125px;
+  }
+
+  .header-nav ul li {
+    padding-right: 15px;
+  }
+  
+  .header-nav ul li:last-child {
+    padding-right: 0;
+  }
+  
+  .header-nav ul {
+    margin: 24px 14px 30px 30px;
+    padding: 0 20px;
+  }
+  
+  .header-btn {
+    color: #ffffff;
+    padding: 6px 12px;
+    background: -webkit-linear-gradient(top, #4387fd, #4683ea);
+    border: 1px solid #4285f4;
+    border-radius: 2px;
+    font-weight: bold;
+  }
+  
+  .google-logo {
+    display: block;
+    background-image: url("imgs/Google_logo.png");
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    width: 272px;
+    height: 92px;
+  }
+
+
+  .icon {
+    display: inline-block;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+  }
+  
+  .header-nav-app-icon {
+    height: 30px;
+    width: 30px;
+    background-image: url(imgs/sprite.png);
+    background-position: -132px -45px;
+    filter: contrast(0);
+  }
+  
+  .search-icon {
+    height: 20px;
+    width: 20px;
+    background-image: url(imgs/icon_search.webp);
+    background-size: cover;
+    /* position: relative;
+    top: 0px;
+    left: -10px; */
+  }
+  
+  .keyboard-icon {
+    height: 24px;
+    width: 24px;
+    background-image: url(imgs/keyboard_icon.png);
+    vertical-align: -webkit-baseline-middle;
+    /* position: relative;
+    top: 0px;
+    right: -2px; */
+    cursor: pointer;
+  }
+  
+  .googlemic-icon {
+    height: 24px;
+    width: 24px;
+    background-image: url(imgs/googlemic_color_icon.png);
+    background-size: cover;
+    /* position: relative;
+    top: -2px;
+    right: -12px; */
+  }
+  
+  .search-input {
+    border: none;
+    height: 34px;
+    width: 447px;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  .input-area {
+    /* position: relative; */
+    border: 1px solid #dfe1e5;
+    border-radius: 50px;
+    height: 44px;
+    width: 584px;
+    margin: 0 auto;
+    margin-top: 17px;
+  }
+  
+  input {
+    margin-top: 5px;
+  }
+  
+  .search-btn {
+    font-size: 14px;
+    margin: 39px 4px;
+  }
+  
+  .search-btn a {
+    background-color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    border-radius: 3px;
+    color: #5f6368;
+    padding: 9px 16px;
+    margin-right: 8px;
+  }
+  
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  footer div {
+    background: #f2f2f2;
+    border-top: 1px solid #e4e4e4;
+    line-height: 40px;
+    min-width: 980px;
+  }
+  
+  .footer-top {
+    font-size: 15px;
+    color: rgba(0, 0, 0, .54);
+    padding-left: 27px;
+  }
+  
+  .footer-bottom {
+    font-size: 13px;
+    height: 41px;
+  }
+  
+  .footer-nav-right ul, .header-nav ul {
+    list-style: none;
+  }
+  
+  .footer-nav-left ul {
+    list-style: none;
+  }
+  
+  .footer-nav-left ul li {
+    padding-left: 27px;
+  }
+  
+  .footer-nav-right ul li {
+    padding-right: 27px;
+  }
+  
+  .footer-bottom nav ul li a {
+    color: #5f6368;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* украшения на кнопки */
+  
+  a:active {
+    color: #609;
+  }
+  
+  .footer-bottom nav ul li a:hover, header ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-bottom nav ul li a:active, header ul li a:active {
+    color: #609;
+  }
+  
+  header ul li a:hover {
+    opacity: .85;
+  }
+  
+  .header-btn:active, .header-btn:hover {
+    box-shadow: 0 1px 0px rgba(0, 0, 0, .15);
+    /* box-shadow: 0 1px 1px 0px rgb(68, 135, 250); */
+    opacity: 1 !important;
+    text-decoration: none !important;
+  }
+  
+  .header-nav-app-icon:hover {
+    filter: contrast(1);
+  }
+
+  .input-area:hover, input:focus~.box-shadow {
+    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+    border-color: rgba(223, 225, 229, 0);
+  }
+
+  .search-btn a:hover {
+    background-image: -webkit-linear-gradient(top, #f8f8f8, #f1f1f1);
+    border: 1px solid #c6c6c6;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    color: #222;
+  }
+  
