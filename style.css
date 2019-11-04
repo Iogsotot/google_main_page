@@ -19,14 +19,19 @@ html, ul, li, * {
     outline: none;
   }
 
-  .container {
-    width: 1120px;
-    margin: 5px auto;
-    text-align: center;
+  li {
+    list-style: none;
+    display: inline-block;
   }
 
   header {
     color: rgba(0, 0, 0, 0.87);
+  }
+  
+  .flex {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
   }
   
   .header-nav {
@@ -34,8 +39,13 @@ html, ul, li, * {
     margin-bottom: 125px;
   }
 
+  .header-nav.flex {
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+  }
+
   .header-nav ul li {
-    padding-right: 15px;
+    padding: 0px 11px 0px 0;
   }
   
   .header-nav ul li:last-child {
@@ -43,84 +53,49 @@ html, ul, li, * {
   }
   
   .header-nav ul {
-    margin: 24px 14px 30px 30px;
+    margin: 16px 11px 34px 30px;
     padding: 0 20px;
   }
   
   .header-btn {
     color: #ffffff;
-    padding: 6px 12px;
+    padding: 7px 12px;
     background: -webkit-linear-gradient(top, #4387fd, #4683ea);
     border: 1px solid #4285f4;
     border-radius: 2px;
     font-weight: bold;
-  }
-  
-  .google-logo {
-    display: block;
-    background-image: url("imgs/Google_logo.png");
-    background-repeat: no-repeat;
-    margin: 0 auto;
-    width: 272px;
-    height: 92px;
+    line-height: 20px;
   }
 
-
-  .icon {
-    display: inline-block;
-    background-repeat: no-repeat;
-    vertical-align: middle;
-  }
-  
   .header-nav-app-icon {
     height: 30px;
     width: 30px;
     background-image: url(imgs/sprite.png);
-    background-position: -132px -45px;
-    filter: contrast(0);
+    background-position: -132px -38px;
+    filter: contrast(0.08);
+    margin-bottom: -10px;
+    
   }
   
-  .search-icon {
-    height: 20px;
-    width: 20px;
-    background-image: url(imgs/icon_search.webp);
-    background-size: cover;
-    /* position: relative;
-    top: 0px;
-    left: -10px; */
+main>.flex {
+  flex-direction: column;
+}
+
+  .google-logo {
+    background-image: url("imgs/Google_logo.png");
+    background-repeat: no-repeat;
+    margin: 0 auto 10px;
+    width: 272px;
+    height: 92px;
   }
-  
-  .keyboard-icon {
-    height: 24px;
-    width: 24px;
-    background-image: url(imgs/keyboard_icon.png);
-    vertical-align: -webkit-baseline-middle;
-    /* position: relative;
-    top: 0px;
-    right: -2px; */
-    cursor: pointer;
-  }
-  
-  .googlemic-icon {
-    height: 24px;
-    width: 24px;
-    background-image: url(imgs/googlemic_color_icon.png);
-    background-size: cover;
-    /* position: relative;
-    top: -2px;
-    right: -12px; */
-  }
-  
-  .search-input {
-    border: none;
-    height: 34px;
-    width: 447px;
-    font-size: 16px;
-    outline: none;
-  }
-  
+
+  .icon {
+    background-repeat: no-repeat;
+    }
+
   .input-area {
-    /* position: relative; */
+    flex-direction: row;
+    justify-content: space-around;
     border: 1px solid #dfe1e5;
     border-radius: 50px;
     height: 44px;
@@ -129,13 +104,52 @@ html, ul, li, * {
     margin-top: 17px;
   }
   
-  input {
-    margin-top: 5px;
+  .search-icon {
+    height: 20px;
+    width: 20px;
+    background-image: url(imgs/icon_search.webp);
+    background-size: cover;
+    position: relative;
+    top: 11px;
+    left: 4px;
   }
   
+  .keyboard-icon {
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    background-image: url(imgs/keyboard_icon.png);
+    vertical-align: -webkit-baseline-middle;
+    position: relative;
+    top: 4px;
+    right: 15px;
+    cursor: pointer;
+  }
+  
+  .googlemic-icon {
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    background-image: url(imgs/googlemic_color_icon.png);
+    background-size: cover;
+    position: relative;
+    top: 10px;
+    right: 7px;
+  }
+  
+  .search-input {
+    margin-top: 5px;
+    border: none;
+    height: 34px;
+    width: 447px;
+    font-size: 16px;
+    outline: none;
+  }
+    
   .search-btn {
     font-size: 14px;
     margin: 39px 4px;
+    align-self: center;
   }
   
   .search-btn a {
@@ -144,48 +158,83 @@ html, ul, li, * {
     border-radius: 3px;
     color: #5f6368;
     padding: 9px 16px;
-    margin-right: 8px;
+    margin-right: 10px;
+    margin-left: -3px;
+  }
+
+  /* sticky footer start */
+
+  .content {
+    min-height: calc(100vh - 82px);
   }
   
   footer {
-    position: absolute;
-    bottom: 0;
+    height: 82px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
     width: 100%;
+  }
+
+  /* sticky footer end */
+
+  @media (max-width: 900px) {
+    .content {
+      min-height: calc(100vh - 99px);
+    }
+    
+    footer {
+      height: 82px;
+      justify-content: space-between;
+      background: #f2f2f2;
+      flex-wrap: wrap;
+      flex-direction: column;
+      width: 100%;
+    }
+
   }
   
   footer div {
     background: #f2f2f2;
     border-top: 1px solid #e4e4e4;
-    line-height: 40px;
-    min-width: 980px;
+    line-height: 40px;  
   }
   
   .footer-top {
     font-size: 15px;
     color: rgba(0, 0, 0, .54);
-    padding-left: 27px;
+    padding-left: 30px;
   }
   
   .footer-bottom {
+    justify-content: space-between;
+    flex-wrap: nowrap;
     font-size: 13px;
     height: 41px;
+    padding: 0 30px;
   }
-  
-  .footer-nav-right ul, .header-nav ul {
-    list-style: none;
+
+  footer {
+    min-width: 885px;
   }
-  
-  .footer-nav-left ul {
-    list-style: none;
-  }
-  
+    
   .footer-nav-left ul li {
-    padding-left: 27px;
+    padding-right: 12px;
+    padding-left: 11px;
+  }
+
+  .footer-nav-right ul li {
+    padding-right: 3px;
+    padding-left: 20px;
+  }
+
+  .footer-nav-left ul li:first-child {
+    padding-left: 0px;
   }
   
-  .footer-nav-right ul li {
-    padding-right: 27px;
-  }
+  /* .footer-nav-right ul li:last-child {
+    padding-right: 0px;
+  } */
   
   .footer-bottom nav ul li a {
     color: #5f6368;
@@ -194,9 +243,7 @@ html, ul, li, * {
   .hidden {
     display: none;
   }
-  
-  /* украшения на кнопки */
-  
+    
   a:active {
     color: #609;
   }
@@ -215,7 +262,6 @@ html, ul, li, * {
   
   .header-btn:active, .header-btn:hover {
     box-shadow: 0 1px 0px rgba(0, 0, 0, .15);
-    /* box-shadow: 0 1px 1px 0px rgb(68, 135, 250); */
     opacity: 1 !important;
     text-decoration: none !important;
   }
